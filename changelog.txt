@@ -1,0 +1,27 @@
+== Changelog ==
+= 1.0 =
+* Released: Jan 6, 2016
+
+= 1.0.2 =
+* Released: Jan 7, 2016
+* Changed Log
+  - Updated the language file
+
+= 1.0.3 =
+* Released: May 07, 2016
+* Changed Log
+  - Reduced the width of top wrapper to 1000px
+  - Add two hooks:lithestore_header_before / lithestore_header_after
+  - Fixed some small php issues.
+  - Fixed some CSS issues.
+  - Fixed the calendar styling broken issue.
+  - Fixed the topbar is overlap on admin bar issue.
+  - Fixed the close button of mobile menu is overlap on admin bar issue.
+  - Added lithestore_ prefix for all variables name.
+
+= 1.0.4 =
+* Released: May 10, 2016
+* Changed Log
+  - Fixed the responsive issues on 1024px and 768px screen.
+  - Fixed the mobile button responsive issue on 768px screen.
+  - Fixed some other CSS issues.
