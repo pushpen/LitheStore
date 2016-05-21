@@ -267,6 +267,7 @@ h3.section-title .divider{
 .site-cover #ls-primary-bar{
 	border-bottom: 1px solid #fff;
     border-color: rgba(255,255,255,.2);
+    overflow: inherit;
 }
 #ls-header-cover{
     clear:both;
