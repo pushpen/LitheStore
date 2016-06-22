@@ -46,6 +46,11 @@ a{
 a:hover{
 	opacity: 1;
 }
+
+:focus{
+	outline-color: #ffa900;
+};
+
 h1,h2,h3,h4,h5,h6,blockquote{
 	font-family: 'Lato', serif;
 }
@@ -82,6 +87,7 @@ input[type="reset"]:hover,
 	border-color:#289bc1;
 	color:#fff;
 }
+
 .error-404{
     min-height:280px;
     padding-top:100px;
@@ -102,7 +108,8 @@ input[type="reset"]:hover,
 	margin-top:5px;
 }
 .archive .section-title{
-	margin:0 auto 4em;
+	margin:1em auto 3em;
+	color:#666;
 }
 .section-title .divider{
 	border-bottom: 1px solid #ddd;
@@ -668,22 +675,26 @@ h3.section-title .divider{
 /*------------------------
 ## Pagination Navigation	
 ------------------------*/
-.lithstore_pagenavi{
+.lithstore_pagenavi,.page-links{
 	text-align:center;
 }
 .lithstore_pagenavi span,
-.lithstore_pagenavi a{
+.lithstore_pagenavi a,
+.page-links a{
 	display:inline-block;
 	padding:6px 15px;
 	border:1px solid #000;
 	color:#000;
 }
 .lithstore_pagenavi a:hover,
-.lithstore_pagenavi span{
+.lithstore_pagenavi span,
+.page-links a:hover{
 	background:#000;
 	color:#fff;
 }
-
+.page-links a{
+	margin:0 20px;
+}
 
 /*--------------------------------------------------------------
 # Alignments
@@ -748,6 +759,7 @@ h3.section-title .divider{
 	margin-top:0;
 	font-size:16px;
 	font-size:1rem;
+	word-wrap: break-word;
 }
 .widget ul{
 	margin:0;
@@ -841,12 +853,23 @@ h3.section-title .divider{
 	display: none;
 }
 .screen-reader-text{
-	display:none;
+	display:block;
+	margin-bottom:15px;
+	font-size:16px;
+	font-size:1rem;
+    font-weight:bold;
 }
 
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+.lithestore_notification{
+	text-align: center;
+	height:250px;
+	margin-top:200px;
+	font-size: 2em;
+}
+
 /*--------------------------------------------
 ## Posts and pages
 ---------------------------------------------*/
@@ -906,16 +929,7 @@ h3.section-title .divider{
     color:#ddd;
     margin-left:10px;
 } 
-.post .entry-meta a,
-.post .entry-meta,
-.post .entry-footer span,
-.post .entry-footer span a{
-	color:#999;
-}
-.post .entry-meta a:hover,
-.post .entry-footer span a:hover{
-    color:#333;
-}
+
 
 .post .entry-meta span i{
 	margin-right:3px;
@@ -939,7 +953,7 @@ h3.section-title .divider{
 }
 .page-links {
 	clear: both;
-	margin: 0 0 1.5em;
+	margin: 4em 0 1.5em;
 }
 
 /*--------------------------------------------------------------
@@ -1501,6 +1515,10 @@ object,
 }
 #ls_popup .popup_content #search_product{
 	width:90%;
+}
+#ls_popup .popup_content .screen-reader-text {
+	 position: absolute !important;
+    left: -999em;
 }
 
 /* =========================

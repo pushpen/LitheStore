@@ -270,7 +270,7 @@ function lithestore_breadcrumbs() {
         echo '<div id="' . $lithestore_breadcrums_id . '" class="' . $lithestore_breadcrums_class . '"><ul>';
            
         // Home page
-        echo '<li class="item-home"><i class="fa fa-home"></i><a class="bread-link bread-home" href="' . get_home_url() . '" title="' . $lithestore_home_title . '">' . $lithestore_home_title . '</a></li>';
+        echo '<li class="item-home"><i class="fa fa-home"></i><a class="bread-link bread-home" href="' . esc_url(get_home_url()) . '" title="' . $lithestore_home_title . '">' . $lithestore_home_title . '</a></li>';
         echo '<li class="separator separator-home"> ' . $lithestore_separator . ' </li>';
            
         if ( is_archive() && !is_tax() && !is_category() && !is_tag() ) {

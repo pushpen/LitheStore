@@ -31,3 +31,11 @@
 * Changed Log
   - Fixed a responsive issues on 768px screen.
   - Fixed the sub menu does’t display.
+
+= 1.0.6 =
+* Released: June 23, 2016
+* Changed Log
+  - Fixed some CSS issues.
+  - Fixed the drop menu doesn't work in the inner page.
+  - Fixed some PHP errors.
+  - Improved some issues for accessibility-ready

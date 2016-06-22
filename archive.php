@@ -22,7 +22,7 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h3 class="section-title">', '<div class="divider"><span></span></div></h3>' );
+					the_archive_title( '<h1 class="section-title">', '<div class="divider"><span></span></div></h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->

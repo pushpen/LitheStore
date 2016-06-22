@@ -50,7 +50,7 @@ function lithestore_pagenavi(){
 	$lithestore_return_html='';
 	$lithestore_return_html.='<div class="lithstore_pagenavi">';
 	$lithestore_return_html.= paginate_links( array(
-		'base' => str_replace( $lithestore_big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+		'base' => str_replace( $lithestore_big, '%#%', esc_url( get_pagenum_link( $lithestore_big ) ) ),
 		'format' => '?paged=%#%',
 		'current' => max( 1, get_query_var('paged') ),
 		'total' => $wp_query->max_num_pages,

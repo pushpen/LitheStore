@@ -35,7 +35,7 @@
 			) );
 		}else{
 			the_excerpt();
-			echo '<p><a href="'.esc_url(get_permalink()).'">'.esc_html__('Continue reading','lithestore').' <span class="meta-nav">&rarr;</span></a></p>';
+			echo '<p><a href="'.esc_url(get_permalink()).'" title="'.get_the_title().'">'.esc_html__('Continue reading','lithestore').' <span class="meta-nav">&rarr;</span></a></p>';
 		}
 		?>
 

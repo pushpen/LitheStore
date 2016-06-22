@@ -16,7 +16,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h2 class="section-title"><?php printf( esc_html__( 'Search Results for: %s', 'lithestore' ), '<span>' . get_search_query() . '</span>' ); ?><div class="divider"><span></span></div></h2>
+				<h1 class="section-title"><?php printf( esc_html__( 'Search Results for: %s', 'lithestore' ), '<span>' . get_search_query() . '</span>' ); ?><div class="divider"><span></span></div></h1>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
