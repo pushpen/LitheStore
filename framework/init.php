@@ -307,6 +307,5 @@ endif;
  * Hooks
  */
 require get_template_directory() . '/framework/hooks.php';
-require get_template_directory() . '/framework/updater/themevan_func.php';
 
 do_action('lithestore_init');

@@ -35,7 +35,7 @@ body{
     overflow-x:hidden;
 }
 a{
-	color:#289bc1;
+	color:#3484db;
 	opacity: .95;
 	text-decoration: none;
 	transition: all 0.2s;
@@ -48,7 +48,7 @@ a:hover{
 }
 
 :focus{
-	outline-color: #ffa900;
+	outline-color: #3484db;
 };
 
 h1,h2,h3,h4,h5,h6,blockquote{
@@ -83,8 +83,8 @@ input[type="button"]:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 .button:hover{
-	background:#289bc1;
-	border-color:#289bc1;
+	background:#3484db;
+	border-color:#3484db;
 	color:#fff;
 }
 
@@ -361,8 +361,8 @@ h3.section-title .divider{
 	color:#bbb;
 }
 #site-icons a:hover{
-	border-color:#289bc1;
-	color:#289bc1;
+	border-color:#3484db;
+	color:#3484db;
 }
 
 /*--------------------------------------------------------------
@@ -670,6 +670,43 @@ h3.section-title .divider{
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
 }
 
 /*------------------------

@@ -39,3 +39,17 @@
   - Fixed the drop menu doesn't work in the inner page.
   - Fixed some PHP errors.
   - Improved some issues for accessibility-ready
+
+= 1.0.7 =
+* Released: July 11, 2016
+* Changed Log
+  - Fixed some CSS issues.
+  - Improved some issues for accessibility-ready
+
+= 1.0.8 =
+* Released: July 19, 2016
+* Changed Log
+  - Fixed some CSS issues.
+  - Improved some PHP security issues
+
+

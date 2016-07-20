@@ -77,7 +77,7 @@ function lithestore_customize_register( $wp_customize ) {
 	    'global_color', 
 	    array(	
 	      'default' => '#289bc1',
-		  'transport' => 'refresh',
+		  'transport' => 'postMessage',
 		  'sanitize_callback' => 'esc_attr'
 		) 
 	);
@@ -85,9 +85,10 @@ function lithestore_customize_register( $wp_customize ) {
 	$wp_customize->add_control( 
 	    new WP_Customize_Color_Control( 
 	      $wp_customize,
-		  'control_nav_bar_color', 
+		  'control_global_color', 
 		  array(  
-		    'label' => __( 'Global Color', 'lithestore' ),												 	'section' => 'color_section',
+		    'label' => __( 'Global Color', 'lithestore' ),												 	
+		    'section' => 'color_section',
 		    'settings' => 'global_color' 
 		 ) 
 	   ) 
@@ -207,19 +208,19 @@ function lithestore_custom_fonts_url() {
 	    $lithestore_font_families = array();
 	 
 	    if(get_theme_mod( 'navigation_font', 'Karla' )<>'Karla'){
-	        $lithestore_font_families[] = get_theme_mod( 'navigation_font', 'Karla' ).':400,600,700,900,400italic,600italic,700italic,900italic';
+	        $lithestore_font_families[] = esc_html(get_theme_mod( 'navigation_font', 'Karla' )).':400,600,700,900,400italic,600italic,700italic,900italic';
 	    }
 	 
 	    if(get_theme_mod( 'body_font', 'Lato' )<>'Lato') {
-	        $lithestore_font_families[] = get_theme_mod( 'body_font', 'Lato' ).':400,700,400italic,700italic';
+	        $lithestore_font_families[] = esc_html(get_theme_mod( 'body_font', 'Lato' )).':400,700,400italic,700italic';
 	    }
 	    
 	    if(get_theme_mod( 'heading_font', 'Lato' )<>'Lato'){
-	        $lithestore_font_families[] = get_theme_mod( 'heading_font', 'Lato' ).':400,700,800,300,100';
+	        $lithestore_font_families[] = esc_html(get_theme_mod( 'heading_font', 'Lato' )).':400,700,800,300,100';
 	    }
 	    
 	    if(get_theme_mod( 'logo_font', 'Montserrat' )<>'Montserrat'){
-	        $lithestore_font_families[] = get_theme_mod( 'logo_font', 'Montserrat' );
+	        $lithestore_font_families[] = esc_html(get_theme_mod( 'logo_font', 'Montserrat' ));
 	    }
 	    
 	    $lithestore_query_args = array(
@@ -233,38 +234,37 @@ function lithestore_custom_fonts_url() {
 }
 
 function lithestore_custom_font_styles() {
+	if ( esc_html(get_theme_mod( 'navigation_font', 'Karla' ))<>'Karla' || esc_html(get_theme_mod( 'body_font', 'Lato' ))<>'Lato' || esc_html(get_theme_mod( 'logo_font', 'Montserrat' ))<>'Montserrat' || esc_html(get_theme_mod( 'heading_font', 'Karla' ))<>'Karla' ) {
     wp_enqueue_style( 'lithestore-custom-fonts', lithestore_custom_fonts_url(), array(), null );
+	}
 }
-
-if ( get_theme_mod( 'navigation_font', 'Karla' )<>'Karla' || get_theme_mod( 'body_font', 'Lato' )<>'Lato' || get_theme_mod( 'logo_font', 'Montserrat' )<>'Montserrat' || get_theme_mod( 'heading_font', 'Karla' )<>'Karla' ) {
-  add_action( 'wp_enqueue_scripts', 'lithestore_custom_font_styles' );
-}
+add_action( 'wp_enqueue_scripts', 'lithestore_custom_font_styles' );
 
 
 /**
  * Output Customize CSS	
  */
 function lithestore_customize_css(){
-	if ( get_theme_mod('global_color', '#289bc1') <>'#289bc1' || get_theme_mod( 'navigation_font', 'Karla' )<>'Karla' || get_theme_mod( 'body_font', 'Lato' )<>'Lato' || get_theme_mod( 'logo_font', 'Montserrat' )<>'Montserrat' || get_theme_mod( 'heading_font', 'Karla' )<>'Karla' ):
+	if ( esc_html(get_theme_mod('global_color', '#289bc1')) <>'#289bc1' || esc_html(get_theme_mod( 'navigation_font', 'Karla' ))<>'Karla' || esc_html(get_theme_mod( 'body_font', 'Lato' ))<>'Lato' || esc_html(get_theme_mod( 'logo_font', 'Montserrat' ))<>'Montserrat' || esc_html(get_theme_mod( 'heading_font', 'Karla' ))<>'Karla' ):
 ?>
      <style type="text/css">
-     <?php if ( get_theme_mod('body_font', 'Lato') <>'Lato'):?>
-         body { font-family:<?php echo get_theme_mod('body_font', 'Lato'); ?>; }
+     <?php if ( esc_html(get_theme_mod('body_font', 'Lato')) <>'Lato'):?>
+         body { font-family:<?php echo esc_html(get_theme_mod('body_font', 'Lato')); ?>; }
      <?php endif;?>
-     <?php if ( get_theme_mod('heading_font', 'Karla') <>'Karla'):?>
-         h1,h2,h3,h4,h5,h6,blockquote{font-family: <?php echo get_theme_mod('heading_font', 'Karla'); ?>, serif;}
+     <?php if ( esc_html(get_theme_mod('heading_font', 'Karla')) <>'Karla'):?>
+         h1,h2,h3,h4,h5,h6,blockquote{font-family: <?php echo esc_html(get_theme_mod('heading_font', 'Karla')); ?>, serif;}
      <?php endif;?>
-     <?php if ( get_theme_mod('navigation_font', 'Karla') <>'Karla'):?>
-         .main-navigation a {font-family: <?php echo get_theme_mod('navigation_font', 'Karla'); ?>, serif;}
+     <?php if ( esc_html(get_theme_mod('navigation_font', 'Karla')) <>'Karla'):?>
+         .main-navigation a {font-family: <?php echo esc_html(get_theme_mod('navigation_font', 'Karla')); ?>, serif;}
      <?php endif;?>
-     <?php if ( get_theme_mod('logo_font', 'Montserrat') <>'Montserrat'):?>
-         .site-branding .site-title{font-family: <?php echo get_theme_mod('logo_font', 'Montserrat'); ?>, serif;}
+     <?php if ( esc_html(get_theme_mod('logo_font', 'Montserrat')) <>'Montserrat'):?>
+         .site-branding .site-title{font-family: <?php echo esc_html(get_theme_mod('logo_font', 'Montserrat')); ?>, serif;}
      <?php endif;?>
-     <?php if ( get_theme_mod('global_color', '#289bc1') <>'#289bc1'):?>    
+     <?php if ( esc_html(get_theme_mod('global_color', '#289bc1')) <>'#289bc1'):?>    
          a,#ls-topbar.withbg .main-navigation a:hover,.main-navigation a:hover,.site-cover .main-navigation a:hover,.widget li a:hover,.widget_categories ul.children li a:hover,
-.widget_nav_menu ul.sub-menu li a:hover,.entry-title a:hover,.woocommerce ul.products li.product .price {color:<?php echo get_theme_mod('global_color', '#289bc1'); ?>;}
-         input[type="button"]:hover,input[type="submit"]:hover,input[type="reset"]:hover,.button:hover,.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover{border-color:<?php echo get_theme_mod('global_color', '#289bc1'); ?>;background-color:<?php echo get_theme_mod('global_color', '#289bc1'); ?>;}
-         #site-icons a:hover{border-color:<?php echo get_theme_mod('global_color', '#289bc1'); ?>;color:<?php echo get_theme_mod('global_color', '#289bc1'); ?>;}
+.widget_nav_menu ul.sub-menu li a:hover,.entry-title a:hover,.woocommerce ul.products li.product .price {color:<?php echo esc_html(get_theme_mod('global_color', '#289bc1')); ?>;}
+         input[type="button"]:hover,input[type="submit"]:hover,input[type="reset"]:hover,.button:hover,.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover{border-color:<?php echo esc_html(get_theme_mod('global_color', '#289bc1')); ?>;background-color:<?php echo esc_html(get_theme_mod('global_color', '#289bc1')); ?>;}
+         #site-icons a:hover{border-color:<?php echo esc_html(get_theme_mod('global_color', '#289bc1')); ?>;color:<?php echo esc_html(get_theme_mod('global_color', '#289bc1')); ?>;}
       <?php endif;?>
      </style>
 <?php

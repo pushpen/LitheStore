@@ -46,10 +46,6 @@ $lithestore = wp_get_theme( 'lithestore' );
 	</div>
 
 	<div class="col boxed faq">
-	    <h2>Premium Version: Focux Theme</h2>
-	    <a href="http://themeforest.net/item/focux-multipurpose-single-product-woocommerce-wordpress-theme/15322470?ref=themevan" target="_blank"><img src="http://www.themevan.com/main/wp-content/uploads/edd/2016/05/focux-1024x933.jpg" /></a>
-	      <p><?php esc_html_e('The premium version Focux is based on Lithestore framework. We include Visual Composer Page Builder and Revolution Slider into this version, and there are more amazing new features in it.','lithestore');?></p>
-	      <p> <a href="http://focuxtheme.com" target="_blank" class="button button-primary"><?php esc_html_e('Learn More','lithestore');?></a> <a href="http://themeforest.net/item/focux-multipurpose-single-product-woocommerce-wordpress-theme/15322470?ref=themevan" target="_blank" class="button"><?php esc_html_e('Buy Now','lithestore');?></a></p>
 	    
 		<h2><?php esc_html_e( 'REQUENTLY ASKED QUESTIONS', 'lithestore' ); ?></h2>
 		<div class="questions">
@@ -82,48 +78,4 @@ $lithestore = wp_get_theme( 'lithestore' );
 		
 	</div>
 	
-</div>
-
-
-<div class="col two-col" style="overflow: hidden;">
-   <div class="col boxed news">
-		<h2><?php printf( esc_html__( 'Latest %s News', 'lithestore' ), 'lithestore' ); ?></h2>
-				<?php
-				$rss		= fetch_feed( 'http://www.themevan.com/category/blog/themevan-news/feed/' );
-				$rss_items	= array();
-
-				if ( ! is_wp_error( $rss ) ) {
-					$maxitems 	= $rss->get_item_quantity( 5 );
-					$rss_items 	= $rss->get_items( 0, $maxitems );
-				}
-
-				foreach ( $rss_items as $item ) : ?>
-					<h5>
-						<a href="<?php echo esc_url( $item->get_permalink() ); ?>">
-							<?php echo esc_html( $item->get_title() ); ?>
-						</a>
-					</h5>
-					<span class="date"><?php echo esc_attr( $item->get_date( 'j F Y' ) ); ?></span>
-				<?php endforeach; ?>
-			
-		</div>
-		
-		
-		<div class="col boxed themes">
-		<h2><?php printf( esc_html__( 'The Other %s Themes', 'lithestore' ), 'lithestore' ); ?></h2>
-			<div class="themes">
-			  <a href="http://themeforest.net/item/citynews-comprehensive-newspaper-wordpress-theme/12575848?ref=themevan" target="_blank"><img src="http://www.themevan.com/main/wp-content/uploads/2015/09/screenshot-citynews-theme-461x292.jpg" /></a>
-			  
-			  <a href="http://www.themevan.com/item/magicbook" target="_blank"><img src="http://www.themevan.com/main/wp-content/uploads/2014/09/magicbook-thumbnail1.jpg" /></a>
-			  
-			   <a href="http://www.themevan.com/item/simplekey" target="_blank"><img src="http://www.themevan.com/main/wp-content/uploads/2014/03/simplekey-thumbnail1.jpg" /></a>
-			   
-			   <a href="http://www.themevan.com/item/wonders" target="_blank"><img src="http://www.themevan.com/main/wp-content/uploads/2014/11/default1.jpg" /></a>
-			   
-			   <a href="http://www.themevan.com/themes" target="_blank" class="button button-primary"><?php esc_html_e('More Themes','lithestore');?></a>
-			 
-			</div>
-			
-		</div>
-
 </div>

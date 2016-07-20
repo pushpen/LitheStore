@@ -23,6 +23,7 @@
 <body <?php body_class(); ?>>
 
 <div id="body-container">
+<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'lithestore' ); ?></a>
     <?php
       do_action('lithestore_start_header');
 	  $header=get_header_image();
