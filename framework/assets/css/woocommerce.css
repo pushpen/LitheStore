@@ -351,7 +351,13 @@
 
 /* #Account Page
 ========================== */
-.woocommerce-page #primary{
+.woocommerce-account #primary,
+.woocommerce-orders #primary,
+.woocommerce-downloads #primary,
+.woocommerce-edit-address #primary,
+.woocommerce-edit-account #primary,
+.woocommerce-cart #primary,
+.woocommerce-checkout #primary{
 	float:none;
 	width:100%;
 }

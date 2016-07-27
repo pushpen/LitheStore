@@ -12,6 +12,6 @@ if ( ! is_active_sidebar( 'sidebar-shop' ) ) {
 }
 ?>
 
-<div id="home-secondary" class="ls-grid ls-col3 widget-area" role="complementary">
+<div id="shop-secondary" class="ls-grid ls-col3 widget-area" role="complementary">
 	<?php dynamic_sidebar( 'sidebar-shop' ); ?>
 </div><!-- #secondary -->
