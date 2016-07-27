@@ -263,7 +263,7 @@ function lithestore_customize_css(){
      <?php if ( esc_html(get_theme_mod('global_color', '#289bc1')) <>'#289bc1'):?>    
          a,#ls-topbar.withbg .main-navigation a:hover,.main-navigation a:hover,.site-cover .main-navigation a:hover,.widget li a:hover,.widget_categories ul.children li a:hover,
 .widget_nav_menu ul.sub-menu li a:hover,.entry-title a:hover,.woocommerce ul.products li.product .price {color:<?php echo esc_html(get_theme_mod('global_color', '#289bc1')); ?>;}
-         input[type="button"]:hover,input[type="submit"]:hover,input[type="reset"]:hover,.button:hover,.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover{border-color:<?php echo esc_html(get_theme_mod('global_color', '#289bc1')); ?>;background-color:<?php echo esc_html(get_theme_mod('global_color', '#289bc1')); ?>;}
+         input[type="button"]:hover,input[type="submit"]:hover,input[type="reset"]:hover,.button:hover,.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover,.bullet_links a.active,.woocommerce a.button.checkout-button{border-color:<?php echo esc_html(get_theme_mod('global_color', '#289bc1')); ?>;background-color:<?php echo esc_html(get_theme_mod('global_color', '#289bc1')); ?>;}
          #site-icons a:hover{border-color:<?php echo esc_html(get_theme_mod('global_color', '#289bc1')); ?>;color:<?php echo esc_html(get_theme_mod('global_color', '#289bc1')); ?>;}
       <?php endif;?>
      </style>

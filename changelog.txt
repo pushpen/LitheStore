@@ -52,4 +52,9 @@
   - Fixed some CSS issues.
   - Improved some PHP security issues
 
+= 1.0.9 =
+* Released: July 28, 2016
+* Changed Log
+  - Fixed some CSS issues.
+  - Compatible with WooCommerce 2.6.x
 

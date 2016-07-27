@@ -240,7 +240,7 @@ function lithestore_copyright(){
 	if(!empty(get_theme_mod( 'copyright')) && get_theme_mod( 'copyright')<>''){
 	    echo get_theme_mod( 'copyright');
 	}else{
-        echo esc_html__( 'Proudly powered by', 'lithestore' ).'<a href="https://wordpress.org/" target="_blank"> WordPress</a><span class="sep"> | </span>'.esc_html__( 'Designed by','lithestore').' <a href="http://www.themevan.com" rel="Theme designer" target="_blank" alt="We Design Premium WordPress Themes">ThemeVan</a>';
+        echo esc_html__( 'Proudly powered by', 'lithestore' ).'<a href="https://wordpress.org/" target="_blank"> WordPress</a><span class="sep"> | </span>'.esc_html__( 'Designed by','lithestore').' <a href="http://lithestore.com" target="_blank" alt="Free WooCommerce WordPress Theme">LitheStore</a>';
 	}
 }
 

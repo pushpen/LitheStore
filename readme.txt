@@ -1,14 +1,12 @@
 === LitheStore ===
-Contributors: ThemeVan
+Contributors: LitheStore
 Requires at least: WordPress 4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: white, light, two-columns, right-sidebar, responsive-layout, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready
+Tags: white, light, two-columns, right-sidebar, responsive-layout, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments
 
 == Description ==
-LitheStore is a free elegant E-Commerce Theme developed by ThemeVan.
-
-For more information about LitheStore please go to http://www.themevan.com/item/lithestore
+LitheStore is a free elegant E-Commerce Theme that you can use it to build your online shop easily and quickly.
 
 == Installation ==
 
