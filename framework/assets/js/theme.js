@@ -123,7 +123,6 @@ jQuery(document).ready(function($){
 
 
 	/*Clone Primary menu items to the mobile menu*/
-	$('#mobile_menu ul').append($('#primary-menu').html());
 	$('#mobile_menu .menu-item-has-children').addClass('pushy-submenu');
 	
 	$('.pushy .menu-item-has-children > a').each(function(){

@@ -9,6 +9,7 @@
 # Breadcrumbs
 # Header Elements
 # Navigation
+# Mega Menu
 # Accessibility
 # Alignments
 # Clearings
@@ -670,6 +671,78 @@ h3.section-title .divider{
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Mega Menu
+--------------------------------------------------------------*/
+#mega-menu-wrap-primary{
+	height:50px;
+	background:none;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link{
+	height:50px;
+	line-height:50px;
+	font-size:14px;
+	font-size:0.8rem;
+	font-weight:400;
+	letter-spacing: 1px;
+	text-transform:uppercase;
+	text-decoration: none;
+	color:#000;
+	font-family: 'Karla', sans-serif;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:hover{
+	opacity: .9;
+	color:#999;
+}
+#mega-menu-wrap-primary .mega-menu-toggle #mega-toggle-block-1:after,
+#mega-menu-wrap-primary .mega-menu-toggle.mega-menu-open #mega-toggle-block-1:after{
+	content:'';
+}
+#mega-menu-wrap-primary .mega-menu-toggle{
+	background:none;
+	height:50px;
+	line-height: 52px;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu,
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu{
+	background:#fff;
+	padding:20px;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu li,
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu li{
+    margin-bottom:5px;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu{
+	padding:0;
+	width:250px;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:hover, 
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link:focus{
+	background:none;
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item,
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link,
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item #wp-calendar caption,
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item h4.mega-block-title,
+#mega-menu-wrap-primary #mega-menu-primary ul, 
+#mega-menu-wrap-primary #mega-menu-primary li, 
+#mega-menu-wrap-primary #mega-menu-primary p,
+#mega-menu-wrap-primary #mega-menu-primary img, 
+#mega-menu-wrap-primary #mega-menu-primary div, 
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link{
+	color:#000;
+	opacity: .98;
+	font-family: 'Karla', sans-serif;
+}
+}
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link,
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link{
+	opacity: 1;
+	font-size:12px;
+	background:none;
+	font-weight:normal;
 }
 
 /*--------------------------------------------------------------
@@ -1592,6 +1665,9 @@ object,
   }
   .search-field{
     width:50%;
+  }
+  #mega-menu-wrap-primary{
+	  display:none;
   }
 } 
 

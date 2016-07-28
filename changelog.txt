@@ -58,3 +58,9 @@
   - Fixed some CSS issues.
   - Compatible with WooCommerce 2.6.x
 
+= 1.1.0 =
+* Released: July 29, 2016
+* Changed Log
+  - Compatible with Max Mega Menu plugin now.
+  - Added mobile menu to the theme location of the menu.
+
