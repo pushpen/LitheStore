@@ -12,7 +12,7 @@ $lithestore = wp_get_theme( 'lithestore' );
 
 
 	<div class="col boxed enrich">
-		<h2><?php esc_html_e( 'Build a Elegant online store.', 'lithestore'); ?></h2>
+		<h2><?php esc_html_e( 'Build an Elegant Online Store.', 'lithestore'); ?></h2>
 
 		<p><?php esc_html_e( 'LitheStore is a free elegant E-commerce WordPress theme based on WooCommerce. It\'s easy to set up for WordPress beginners if you follow these steps below.', 'lithestore'); ?></p>
         
@@ -23,26 +23,33 @@ $lithestore = wp_get_theme( 'lithestore' );
 		<?php } else { ?>
 			<li><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=woocommerce' ), 'install-plugin_woocommerce' ) ); ?>" class="button button-primary"><?php printf( esc_html__( 'Install %s', 'lithestore' ), 'WooCommerce' ); ?></a></li>
 		<?php } ?>
-		<li><?php printf(__('Download <a href="%s" target="_blank">LitheStore dummy data</a>','lithestore'),'http://demo.themevan.com/lithestore/wp-content/uploads/sites/16/2016/01/dummy-data.zip');?></li>
 		
+		<?php if ( class_exists( 'PT_One_Click_Demo_Import' ) ) { ?>
+		<li><span class="activated"><span class="dashicons dashicons-yes"></span> <?php printf( esc_html__( '%s is activated', 'lithestore' ), 'One Click Demo Import' ); ?></span></li>
+		<?php }else{ ?>
 		<li>
-		<?php printf(__('Unzip the package, you will get two xml files. Go to <a href="%s" target="_blank">Tools > Import</a> page, upload those two xml files.','lithestore'), home_url('/').'/wp-admin/admin.php?import=wordpress');?>
+	      <a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=one-click-demo-import' ), 'install-plugin_one-click-demo-import' ) ); ?>" class="button button-primary"><?php printf( esc_html__( 'Install %s', 'lithestore' ), 'One Click Demo Import Plugin' ); ?></a>
 		</li>
+		<?php } ?>
+
 		<li>
-		<?php printf(__('Go to <a href="%s" target="_blank">Appearance > Menus</a>, select "Primary Menu", and check "primary menu" for "Theme locations".','lithestore'), home_url('/').'wp-admin/nav-menus.php');?>
-		
-		<p><a href="<?php echo get_template_directory_uri();?>/framework/functions/welcome/img/menu-setting.jpg" target="_blank"><img src="<?php echo get_template_directory_uri();?>/framework/functions/welcome/img/menu-setting.jpg" /></a></p></li>
-		
+		<?php printf(__('Go to <a href="%s" target="_blank">Appearance > Import Demo Data</a>, just one click to import the demo data.','lithestore'), home_url('/').'wp-admin/themes.php?page=pt-one-click-demo-import');?>
+		</li>
+
 		<li>
-		<?php printf(__("Go to <a href='%s' target='_blank'>Settings > Reading</a>, select the 'Home' as the front page.That's it! Your website will look as same as the <a href='%s' target='_blank'>demo site</a>. You can modify the posts or products content based on the dummy data.",'lithestore'), home_url('/').'wp-admin/nav-menus.php','http://demo.themevan.com/lithestore/');?>
-		
-		 </li>
+		<?php esc_html_e('Then, you can modify the content based on the demo content. Enjoy it!','lithestore');?>
+		</li>
 		 
 		 <li>		 		 
 		 <?php printf(__('There are some custom options included in the <a href="%s" target="_blank">Appearance > Customize</a> that allow you to change the fonts or color.
 ','lithestore'), home_url('/').'wp-admin/customize.php');?>
 		 </li>
         </ol>
+
+        <p>
+        <a href="https://wordpress.org/support/theme/lithestore" target="_blank" class="button"><?php esc_html_e('Free Support','lithestore');?></a>
+        <a href="https://johnwu.wufoo.com/forms/zl9zbn41u45t2i/" target="_blank" class="button-primary"><?php esc_html_e('Need Paid Customization Service?','lithestore');?></a>
+    	</p>
 	</div>
 
 	<div class="col boxed faq">

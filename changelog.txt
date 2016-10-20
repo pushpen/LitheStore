@@ -64,3 +64,8 @@
   - Compatible with Max Mega Menu plugin now.
   - Added mobile menu to the theme location of the menu.
 
+= 1.1.1 =
+* Released: October 02, 2016
+* Changed Log
+  - Added One Click Demo Import Feature.
+

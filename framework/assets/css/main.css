@@ -680,6 +680,12 @@ h3.section-title .divider{
 	height:50px;
 	background:none;
 }
+.site-cover #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link{
+	color:#fff;
+}
+#ls-topbar.withbg #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link{
+	color:#000;
+}
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link{
 	height:50px;
 	line-height:50px;

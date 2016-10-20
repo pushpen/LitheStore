@@ -285,12 +285,22 @@ function lithestore_load_framework(){
 	 * Custom functions that act independently of the theme templates.
 	 */
 	require get_template_directory() . '/framework/functions/extras.php';
+
+	/**
+	 * Plugins
+	 */
+	require get_template_directory() . '/framework/functions/plugins.php';
 	
 	
 	/**
 	 * Include Welcome screen
 	 */
 	require get_template_directory() . '/framework/functions/welcome/welcome.php';
+
+	/**
+	 * Include Demo Importer
+	 */
+	require get_template_directory() . '/framework/demo/demo-importer.php';
 
 	
 	/**
